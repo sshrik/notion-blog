@@ -1,4 +1,4 @@
-import type { NotionBlockObject } from './index.d';
+import type { NotionBlockObject } from './notion.d';
 
 export type GetPageResponse = {
   results: NotionBlockObject[];
