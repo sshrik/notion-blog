@@ -1,5 +1,5 @@
 import { makeAutoObservable } from 'mobx';
-import type { NotionBlockObject } from 'type/index.d';
+import type { NotionBlockObject } from 'type/notion';
 import getPage from 'service/queryBlog';
 
 class BlogPage {
