@@ -2,7 +2,7 @@
 import { createGlobalStyle, DefaultTheme } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
-const palette = {
+export const color = {
   codeFont: '#eb5757',
   codeBackground: '#D7D7D5',
   paragraphBlackFont: '#37352F',
@@ -46,10 +46,10 @@ const palette = {
   redBlock: '#ffe2dd',
 };
 
-export type Palette = { [K in keyof typeof palette]: K };
+export type Palette = { [K in keyof typeof color]: K };
 
 export const theme: DefaultTheme = {
-  palette: palette as Palette,
+  palette: color as Palette,
 };
 
 const GlobalStyle = createGlobalStyle`
