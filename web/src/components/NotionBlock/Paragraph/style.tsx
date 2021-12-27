@@ -18,6 +18,30 @@ function getAppropriateColor(props: Annotation, isFont: boolean): string {
     return isFont ? color.grayFont : defaultBackground;
   } else if (props.color === 'gray_background') {
     return isFont ? defaultFont : color.grayBackground;
+  } else if (props.color === 'green') {
+    return isFont ? color.tealFont : defaultBackground;
+  } else if (props.color === 'green_background') {
+    return isFont ? defaultFont : color.tealBackground;
+  } else if (props.color === 'orange') {
+    return isFont ? color.orangeFont : defaultBackground;
+  } else if (props.color === 'orange_background') {
+    return isFont ? defaultFont : color.orangeBackground;
+  } else if (props.color === 'pink') {
+    return isFont ? color.pinkFont : defaultBackground;
+  } else if (props.color === 'pink_background') {
+    return isFont ? defaultFont : color.pinkBackground;
+  } else if (props.color === 'purple') {
+    return isFont ? color.purpleFont : defaultBackground;
+  } else if (props.color === 'purple_background') {
+    return isFont ? defaultFont : color.purpleBackground;
+  } else if (props.color === 'red') {
+    return isFont ? color.redFont : defaultBackground;
+  } else if (props.color === 'red_background') {
+    return isFont ? defaultFont : color.redBackground;
+  } else if (props.color === 'yellow') {
+    return isFont ? color.redFont : defaultBackground;
+  } else if (props.color === 'yellow_background') {
+    return isFont ? defaultFont : color.yellowBackground;
   }
   return isFont ? defaultFont : defaultBackground;
 }
@@ -39,7 +63,7 @@ const Paragraph = styled.p<Annotation>`
 
 const Container = styled.div`
   display: flex;
-  flex-directrion: row;
+  flex-direction: row;
   flex-wrap: wrap;
 `;
 
