@@ -1,5 +1,9 @@
-import { NotionBlockObject } from './notion.d';
-import { RichTextType, ColorType, CodeLanguageType } from './notionBaseType.d';
+import { NotionBlockObject } from 'types/notion.d';
+import {
+  RichTextType,
+  ColorType,
+  CodeLanguageType,
+} from 'types/notionBaseType.d';
 
 type Annotation = {
   bold: boolean;

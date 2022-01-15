@@ -30,8 +30,8 @@ import {
   ColumnListBlockObject,
   BreadcrumbBlockObject,
   CodeBlockObject,
-} from './notionBaseBlock.d';
-import { BlockType, ObjectType } from './notionBaseType.d';
+} from 'types/notionBaseBlock.d';
+import { BlockType, ObjectType } from 'types/notionBaseType.d';
 
 type PickOne<T> = {
   [P in keyof T]: Record<P, T[P]> &
