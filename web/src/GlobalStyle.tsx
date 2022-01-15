@@ -1,10 +1,9 @@
-// src/assets/styles/global-styles.ts
 import { createGlobalStyle, DefaultTheme } from 'styled-components';
 import { normalize } from 'styled-normalize';
 
 export const color = {
   codeFont: '#eb5757',
-  codeBackground: '#D7D7D5',
+  codeBackground: '#E5E5E5',
   paragraphBlackFont: '#37352F',
   tableBlackFont: '#37352F',
   border: '#D5D5D4',
@@ -58,11 +57,11 @@ const GlobalStyle = createGlobalStyle`
     -webkit-print-color-adjust: exact;
     box-sizing: border-box;
     margin: 0px;
-    padding: 0px;
+    padding: 0px; 
   }
 
   h1, h2, h3, h4, h5, h6, p, a, div, span, button {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
   }
 
   .sans {
@@ -88,11 +87,17 @@ const GlobalStyle = createGlobalStyle`
   a, a.visited {
     color: inherit;
     text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .link {
+    text-decoration: underline;
+    text-decoration-color: ${(props) => props.theme.palette.grayFont};
   }
 
   h1, h2, h3 {
     letter-spacing: -0.01em;
-    line-height: 1.2;
+    line-height: 1.2rem;
     font-weight: 600;
     margin-bottom: 0;
   }
@@ -208,14 +213,12 @@ const GlobalStyle = createGlobalStyle`
     margin-bottom: 0.5em;
   }
 
-  /* code class는 code를 감싸는 wrapper의 역할 */
-  code {
+  code, .code {
+    font-size: 0.85em;
     background: ${(props) => props.theme.palette.codeBackground};
     color: ${(props) => props.theme.palette.codeFont};
     border-radius: 3px;
-    padding: 1.5em 1em;
-    border-radius: 3px;
-    font-size: 100%;
+    padding: 0.2em 0.4em;
     tab-size: 2;
   }
 
