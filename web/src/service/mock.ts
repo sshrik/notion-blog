@@ -1,4 +1,4 @@
-import { GetPageResponse } from 'type/queryType.d';
+import { GetPageResponse } from 'types/queryType.d';
 
 const result: GetPageResponse = {
   results: [
@@ -36,7 +36,7 @@ const result: GetPageResponse = {
       object: 'block',
       id: 'b1d01ad5-b700-4b68-a6e5-bccc4092a43c',
       created_time: '2021-12-26T14:16:00.000Z',
-      last_edited_time: '2021-12-26T14:27:00.000Z',
+      last_edited_time: '2021-12-27T03:41:00.000Z',
       has_children: false,
       archived: false,
       type: 'paragraph',
@@ -117,7 +117,7 @@ const result: GetPageResponse = {
       object: 'block',
       id: 'dc5de591-30a3-4213-a708-f025450db4f9',
       created_time: '2021-12-26T14:08:00.000Z',
-      last_edited_time: '2021-12-26T14:09:00.000Z',
+      last_edited_time: '2021-12-27T12:31:00.000Z',
       has_children: false,
       archived: false,
       type: 'heading_2',
@@ -143,6 +143,40 @@ const result: GetPageResponse = {
           {
             type: 'text',
             text: {
+              content: 'CODE',
+              link: null,
+            },
+            annotations: {
+              bold: false,
+              italic: false,
+              strikethrough: false,
+              underline: false,
+              code: true,
+              color: 'default',
+            },
+            plain_text: 'CODE',
+            href: null,
+          },
+          {
+            type: 'text',
+            text: {
+              content: ' ',
+              link: null,
+            },
+            annotations: {
+              bold: false,
+              italic: false,
+              strikethrough: false,
+              underline: false,
+              code: false,
+              color: 'default',
+            },
+            plain_text: ' ',
+            href: null,
+          },
+          {
+            type: 'text',
+            text: {
               content: 'TEXT',
               link: null,
             },
@@ -160,7 +194,7 @@ const result: GetPageResponse = {
           {
             type: 'text',
             text: {
-              content: ' WITH ',
+              content: ' ',
               link: null,
             },
             annotations: {
@@ -171,7 +205,43 @@ const result: GetPageResponse = {
               code: false,
               color: 'default',
             },
-            plain_text: ' WITH ',
+            plain_text: ' ',
+            href: null,
+          },
+          {
+            type: 'text',
+            text: {
+              content: 'WITH',
+              link: {
+                url: 'http://naver.com',
+              },
+            },
+            annotations: {
+              bold: false,
+              italic: true,
+              strikethrough: false,
+              underline: false,
+              code: true,
+              color: 'default',
+            },
+            plain_text: 'WITH',
+            href: 'http://naver.com',
+          },
+          {
+            type: 'text',
+            text: {
+              content: ' ',
+              link: null,
+            },
+            annotations: {
+              bold: false,
+              italic: false,
+              strikethrough: false,
+              underline: false,
+              code: false,
+              color: 'default',
+            },
+            plain_text: ' ',
             href: null,
           },
           {
