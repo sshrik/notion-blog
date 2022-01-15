@@ -93,6 +93,7 @@ const GlobalStyle = createGlobalStyle`
   .link {
     text-decoration: underline;
     text-decoration-color: ${(props) => props.theme.palette.grayFont};
+    opacity: 0.7;
   }
 
   h1, h2, h3 {
