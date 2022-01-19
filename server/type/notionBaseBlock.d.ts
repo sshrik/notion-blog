@@ -1,5 +1,5 @@
-import { RichTextType, ColorType, CodeLanguageType } from './baseType.d';
-import { NotionBlockObject } from './index.d';
+import { NotionBlockObject } from './notion.d';
+import { RichTextType, ColorType, CodeLanguageType } from './notionBaseType.d';
 
 type Annotation = {
   bold: boolean;
@@ -10,16 +10,17 @@ type Annotation = {
   color: ColorType;
 };
 
-type RichText = {
-  plain_text: string;
-  href?: string;
-  annotations: Annotation;
-  type: RichTextType;
+type Text = {
+  content: string;
+  link: { url: string } | null;
 };
 
-export type Text = {
-  content: string;
-  link?: string;
+type RichText = {
+  plain_text: string;
+  href: string | null;
+  text: Text;
+  annotations: Annotation;
+  type: RichTextType;
 };
 
 export type MentionType = {
@@ -42,7 +43,7 @@ type OnlyTextType = {
 };
 
 type TextWithChildType = OnlyTextType & {
-  child: NotionBlockObject[];
+  child?: NotionBlockObject[];
 };
 
 type Empty = Record<string, never>;
@@ -122,6 +123,10 @@ export type BreadcrumbBlockObject = Empty;
 export type ColumnListBlockObject = Empty;
 
 export type ColumnChildBlockObject = Empty;
+
+export type ColumnValueBlockObject = {
+  column: NotionBlockObject[];
+};
 
 export type LinkPreviewBlockObject = {
   url: string;

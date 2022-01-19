@@ -28,6 +28,7 @@ import {
   TableOfContentsBlockObject,
   ColumnChildBlockObject,
   ColumnListBlockObject,
+  ColumnValueBlockObject,
   BreadcrumbBlockObject,
   CodeBlockObject,
 } from 'types/notionBaseBlock.d';
@@ -62,6 +63,7 @@ type SyncTypeAndName = {
   table_of_contents: TableOfContentsBlockObject;
   column: ColumnListBlockObject;
   column_list: ColumnChildBlockObject;
+  column_value: ColumnValueBlockObject;
   link_preview: LinkPreviewBlockObject;
   synced_block: OriginalSyncedBlockObject | ReferencedSyncedBlockObject;
   template: TemplateBlockObject;

@@ -28,10 +28,11 @@ import {
   TableOfContentsBlockObject,
   ColumnChildBlockObject,
   ColumnListBlockObject,
+  ColumnValueBlockObject,
   BreadcrumbBlockObject,
   CodeBlockObject,
-} from './baseBlock.d';
-import { BlockType, ObjectType } from './baseType.d';
+} from './notionBaseBlock.d';
+import { BlockType, ObjectType } from './notionBaseType.d';
 
 type PickOne<T> = {
   [P in keyof T]: Record<P, T[P]> &
@@ -62,6 +63,7 @@ type SyncTypeAndName = {
   table_of_contents: TableOfContentsBlockObject;
   column: ColumnListBlockObject;
   column_list: ColumnChildBlockObject;
+  column_value: ColumnValueBlockObject;
   link_preview: LinkPreviewBlockObject;
   synced_block: OriginalSyncedBlockObject | ReferencedSyncedBlockObject;
   template: TemplateBlockObject;

@@ -128,6 +128,10 @@ export type ColumnListBlockObject = Empty;
 
 export type ColumnChildBlockObject = Empty;
 
+export type ColumnValueBlockObject = {
+  column: NotionBlockObject[];
+};
+
 export type LinkPreviewBlockObject = {
   url: string;
 };

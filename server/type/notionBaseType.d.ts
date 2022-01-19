@@ -22,6 +22,7 @@ export type BlockType =
   | 'table_of_contents'
   | 'column'
   | 'column_list'
+  | 'column_value'
   | 'link_preview'
   | 'synced_block'
   | 'template'

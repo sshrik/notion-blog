@@ -6,6 +6,9 @@
     "rootDir": "./",
     "baseUrl": ".",
     "outDir": "./dist",
+    "paths": {
+      "type/*": ["./type/*"]
+    },
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

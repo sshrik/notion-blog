@@ -1,5 +1,4 @@
 import { Client } from '@notionhq/client';
-import { ListBlockChildrenResponse } from '@notionhq/client/build/src/api-endpoints';
 
 export async function retrievePage(pageId: string) {
   const NOTION_SECRET_KEY = process.env.NOTION_SECRET_KEY ?? '';
@@ -10,9 +9,7 @@ export async function retrievePage(pageId: string) {
   return response;
 }
 
-export async function retrieveBlockChild(
-  blockId: string
-): Promise<ListBlockChildrenResponse> {
+export async function retrieveBlockChild(blockId: string) {
   const NOTION_SECRET_KEY = process.env.NOTION_SECRET_KEY ?? '';
   const notion = new Client({ auth: NOTION_SECRET_KEY });
   const response = await notion.blocks.children.list({
