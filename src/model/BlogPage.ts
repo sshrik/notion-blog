@@ -1,6 +1,6 @@
 import { runInAction, makeAutoObservable } from 'mobx';
 import type { NotionBlockObject } from 'types/notion';
-import getPage from 'service/queryBlog';
+import getPage from 'service/queryBlock';
 
 class BlogPage {
   private _response: NotionBlockObject[] = [];

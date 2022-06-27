@@ -2,10 +2,11 @@
   "env" : {
     "browser": true
   },
-  "plugins": ["prettier"],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
   "extends": [
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended", 
     "plugin:prettier/recommended",
     "airbnb-base"],
   "parser": "@typescript-eslint/parser",
@@ -13,7 +14,9 @@
     "comma-dangle": "off",
     "no-use-before-define": "error",
     "no-console": "off",
+    "no-else-return": "off",
     "no-underscore-dangle": "off",
+    "implicit-arrow-linebreak": "off",
     "import/order": [
       "error", 
       {
@@ -37,8 +40,9 @@
         }
       }
     ],
-    "implicit-arrow-linebreak": "off",
-    "function-paren-newline": "off",
+    "object-curly-newline": "off",
+    "class-methods-use-this": "off",
+    "@typescript-eslint/no-unnecessary-type-constraint": "off",
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -48,12 +52,29 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "no-restricted-imports": [
+      "error", 
+      {
+        "patterns": ["..*"]
+      }
+    ],
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "ImportDeclaration:has(ImportNamespaceSpecifier) > Literal[value!=/\\.style$/]"
+      },
+      {
+        "selector": "ExportAllDeclaration"
+      }
+    ],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"]
   },
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": ["service", "model"],
+        "paths": ["src"],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
